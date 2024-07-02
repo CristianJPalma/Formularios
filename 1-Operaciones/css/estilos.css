@@ -1,0 +1,20 @@
+/*
+Ejercicio de hola MUndo o saludo
+Autor: Andres MC
+Fecha: 14 de junio de 2024
+
+*/
+
+.forma{
+    margin-top: 90px;
+    display: flex;
+    flex-wrap: nowrap;
+    /* border: 1px solid #000;*/
+}
+
+.formulario, .respuesta{
+    border: 2px solid #0909;
+    border-radius: 6px;
+    margin-left: 10px;
+    padding: 15px;
+}
