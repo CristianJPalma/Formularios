@@ -6,60 +6,54 @@
 
 
 function calcularEdad() {
-    let fechaNacimiento1 = document.getElementById('fecha').value;
-    let hoy1 = new Date();
-    let fechaNac1 = new Date(fechaNacimiento1);
-    let edad1 = hoy1.getFullYear() - fechaNac1.getFullYear();
-    let mes1 = hoy.getMonth() - fechaNac1.getMonth();
+    let fechaNacimiento1 = new Date(document.getElementById('fecha1').value);
+    let fechaNacimiento2 = new Date(document.getElementById('fecha2').value);
+    let fechaNacimiento3 = new Date(document.getElementById('fecha3').value);
     let descripcion1;
+    let descripcion2;
+    let descripcion3;
+    
+    let edad1 = obtenerEdad(fechaNacimiento1);
+    let edad2 = obtenerEdad(fechaNacimiento2);
+    let edad3 = obtenerEdad(fechaNacimiento3);
 
-    if (mes1 < 0 || (mes1 === 0 && hoy1.getDate() < fechaNac1.getDate())) {
-        edad1--;
-    }
-    if(edad1<18){
-        descripcion1 = "Es menor de edad"
-    }
-    else if(edad1>17){
+    if(edad1>17){
         descripcion1 = "Es mayor de edad"
     }
-    let fechaNacimiento2 = document.getElementById('fechaDos').value;
-    let hoy2 = new Date();
-    let fechaNac2 = new Date(fechaNacimiento2);
-    let edad2 = hoy2.getFullYear() - fechaNac2.getFullYear();
-    let mes2 = hoy2.getMonth() - fechaNac2.getMonth();3
-    let descripcion2;
-
-    if (mes2 < 0 || (mes2 === 0 && hoy2.getDate() < fechaNac2.getDate())) {
-        edad2--;
+    else{
+        descripcion1 = "Es menor de edad"
     }
-    if(edad2<18){
-        descripcion2 = "Es menor de edad"
-    }
-    else if(edad2>17){
+    if(edad2>17){
         descripcion2 = "Es mayor de edad"
     }
-    let fechaNacimiento3 = document.getElementById('fechaTres').value;
-    let hoy3 = new Date();
-    let fechaNac3 = new Date(fechaNacimiento3);
-    let edad3 = hoy.getFullYear() - fechaNac3.getFullYear();
-    let mes3 = hoy.getMonth() - fechaNac3.getMonth();
-    let descripcion3;
-
-    if (mes3 < 0 || (mes3 === 0 && hoy3.getDate() < fechaNac3.getDate())) {
-        edad3--;
+    else{
+        descripcion2 = "Es menor de edad"
     }
-    if(edad3<18){
-        3 = "Es menor de edad"
-    }
-    else if(edad>17){
+    if(edad3>17){
         descripcion3 = "Es mayor de edad"
     }
-    edad1 = document.getElementById('edadUno').innerHTML=`<strong>Edad: </strong>${edad1}`;
-    descripcion1 = document.getElementById('descripcionUno').innerHTML=`<strong>Descripcion: </strong>${descripcion1}`;
-    edad2 = document.getElementById('edadDos').innerHTML=`<strong>Edad: </strong>${edad2}`;
-    descripcion2 = document.getElementById('descripcionDos').innerHTML=`<strong>Descripcion: </strong>${descripcion2}`;
-    edad3 = document.getElementById('edadTres').innerHTML=`<strong>Edad: </strong>${edad3}`;
-    descripcion3 = document.getElementById('descripcionTres').innerHTML=`<strong>Descripcion: </strong>${descripcion3}`
+    else{
+        descripcion3 = "Es menor de edad"
+    }
+    document.getElementById('descripcion1').innerHTML = `<strong>Descripcion: </strong>${descripcion1}`;
+    document.getElementById('descripcion2').innerHTML = `<strong>Descripcion: </strong>${descripcion2}`;
+    document.getElementById('descripcion3').innerHTML = `<strong>Descripcion: </strong>${descripcion3}`;
+
+    document.getElementById('edadUno').innerHTML = `<strong>Edad: </strong>${edad1}`;
+    document.getElementById('edadDos').innerHTML = `<strong>Edad: </strong>${edad2}`;
+    document.getElementById('edadTres').innerHTML = `<strong>Edad: </strong>${edad3}`;
+
     return false;
 }
- 
+
+function obtenerEdad(fechaNacimiento) {
+    const hoy = new Date();
+    let edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
+    const mes = hoy.getMonth() - fechaNacimiento.getMonth();
+
+    if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNacimiento.getDate())) {
+        edad--;
+    }
+
+    return edad;
+}
