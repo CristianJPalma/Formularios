@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayor de tres numeros</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="container">
+        <div class="forma row col-10">
+            <div class="formulario col-7">
+                <form class="row g-3 needs-validation" onsubmit="return calcularMayor();" novalidate >
+                    <div class="col-md-12">
+                      <label for="num1" class="form-label">Primer Numero</label>
+                      <input type="number" class="form-control" id="num1" required>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <label for="num2" class="form-label">Segundo Numero</label>
+                      <input type="number" class="form-control" id="num2" required>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <label for="num3" class="form-label">Tercer Numero</label>
+                      <input type="number" class="form-control" id="num3" required>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button class="btn btn-primary" type="submit">Resultado </button>
+                    </div>
+                  </form>
+            </div>
+            <div class="respuesta col-4">
+                <h4>Resultado</h4>
+                <div id="descripcion"></div>
+            </div>
+        </div>
+    </div>
+
+  
+    <script src="js/validate.js"></script>
+    <script src="js/mayor.js"></script>
+</body>
+</html>

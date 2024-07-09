@@ -1,5 +1,5 @@
 /**
- * función calcularArea
+ * función calcularMayor
  * auto: CristianJPalma
  * fecha: 5 de julio de 2024
  */
@@ -13,8 +13,11 @@ function calcularMayor(){
         diferencia = "Los dos numeros son iguales"
     }
     else if (numUno > numDos){
-        diferencia ? "El numero"
+        diferencia = "El primer numero es mayor"
     }
-    area = document.getElementById('resultado').innerHTML=`<strong>Area: </strong>${area}`;
+    else if(numUno < numDos){
+        diferencia = "El segundo numero es mayor"
+    }
+    document.getElementById('descripcion').innerHTML=`<strong>Descripcion: </strong>${diferencia}`;
     return false;
 }

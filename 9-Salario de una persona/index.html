@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salario de una persona</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="container">
+        <div class="forma row col-10">
+            <div class="formulario col-7">
+                <form class="row g-3 needs-validation" onsubmit="return calcularSalarioTotal();" novalidate >
+                    <div class="col-md-12">
+                      <label for="numDias" class="form-label">Numeros de dias trabajados</label>
+                      <input type="number" class="form-control" id="numDias" required>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <label for="valorDia" class="form-label">Valor del dia</label>
+                      <input type="number" class="form-control" id="valorDia" required>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <label for="salarioMinimo" class="form-label">Salario minimo</label>
+                      <input type="number" class="form-control" id="salarioMinimo" value="1300000" required>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button class="btn btn-primary" type="submit">Resultado </button>
+                    </div>
+                  </form>
+            </div>
+            <div class="respuesta col-4">
+                <h4>Resultado</h4>
+                <div id="salario"></div>
+                <div id="subTransporte"></div>
+                <div id="deducible"></div>
+                <div id="salarioTotal"></div>
+            </div>
+        </div>
+    </div>
+
+  
+    <script src="js/validate.js"></script>
+    <script src="js/salario.js"></script>
+</body>
+</html>

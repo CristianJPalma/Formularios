@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Rectangulos</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="container">
+        <div class="forma row col-10">
+            <div class="formulario col-7">
+                <form class="row g-3 needs-validation" onsubmit="return calcularArea();" novalidate >
+                    <div class="col-md-12">
+                      <label for="baseUno" class="form-label">Base primer rectangulo</label>
+                      <input type="number" class="form-control" id="baseUno" required>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <label for="alturaUno" class="form-label">Altura primer rectangulo</label>
+                      <input type="number" class="form-control" id="alturaUno" required>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <label for="baseDos" class="form-label">Base segundo rectangulo</label>
+                      <input type="number" class="form-control" id="baseDos" required>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <label for="alturaDos" class="form-label">Altura segundo rectangulo</label>
+                      <input type="number" class="form-control" id="alturaDos" required>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button class="btn btn-primary" type="submit">Resultado </button>
+                    </div>
+                  </form>
+            </div>
+            <div class="respuesta col-4">
+                <h4>Resultado</h4>
+                <div id="areaUno"></div>
+                <div id="areaDos"></div>
+                <div id="descripcion"></div>
+            </div>
+        </div>
+    </div>
+
+  
+    <script src="js/validate.js"></script>
+    <script src="js/area.js"></script>
+</body>
+</html>
