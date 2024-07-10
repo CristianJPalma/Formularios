@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de multiplicar</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="container">
+        <div class="forma row col-10">
+            <div class="formulario col-7">
+                <form class="row g-3 needs-validation" onsubmit="return tablaMultiplicar();" novalidate >
+                    <div class="col-md-12">
+                      <label for="numTabla" class="form-label">Tabla del:</label>
+                      <input type="number" class="form-control" id="numTabla"  min="1" max="999" required>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <label for="numero" class="form-label">Hasta:</label>
+                      <input type="number" class="form-control" id="numero"  min="1" max="999" required>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <button class="btn btn-primary" type="submit">Calcular <i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                  </form>
+            </div>
+            <div class="respuesta col-4">
+                <h4>Resultado</h4>
+                <div id="tabla"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/validate.js"></script>
+    <script src="js/tabla.js"></script>
+</body>
+</html>
