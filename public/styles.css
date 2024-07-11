@@ -1,0 +1,62 @@
+body{
+    background-image: url('https://www.xtrafondos.com/wallpapers/degradado-linea-morado-11903.jpg');
+    background-image: url('/public/img/fondo.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    text-align: center;
+    font-size: 2.6rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h2{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: auto;
+    color: black;
+    background-color:rgb(252, 233, 210);
+    border-radius: 6px;
+    opacity: 0.9;
+}
+
+.cajas{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-right: auto;
+    margin-left: auto;
+    width: 1400px;
+    margin-top: 50px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(6, 190px);
+    grid-template-rows: repeat(2, 150px);
+    row-gap: 90px;
+    column-gap: 30px;   
+}
+.caja{
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: rgb(253, 253, 211);
+    box-shadow: inset 2px 2px 5px 0 rgba(20, 20, 20, 0.2);
+}
+.saludo{
+    width: 185px;
+    height: 149px;
+    border-radius: 8px;
+}
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+ 
+
+.centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
